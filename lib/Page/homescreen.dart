@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_coffe/widget/coffe_widget.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -25,16 +25,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: Text(
-              "CARI COFFEE YANG KAMU SUKA",
-              style: TextStyle(
-                color: Colors.orange,
-                fontSize: 54,
-                wordSpacing: 5,
-                letterSpacing: 3,
-                fontWeight: FontWeight.bold,
+              "FIND THE BEST COFFE FOR YOU",
+              style: GoogleFonts.bebasNeue(
+                fontSize: 56,
               ),
             ),
           ),
