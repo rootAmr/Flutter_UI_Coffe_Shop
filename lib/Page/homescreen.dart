@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_coffe/widget/coffe_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
               "CARI COFFEE YANG KAMU SUKA",
               style: TextStyle(
                 color: Colors.orange,
-                fontSize: 36,
+                fontSize: 54,
                 wordSpacing: 5,
                 letterSpacing: 3,
                 fontWeight: FontWeight.bold,
@@ -55,13 +56,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           const SizedBox(height: 25),
           Expanded(
-            child: ListView(
-              children: const [
-                SizedBox(
-                  width: 200,
-                  height: 20,
-                ),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView(scrollDirection: Axis.horizontal, children: const [
+                Coffe(),
+              ]),
             ),
           ),
         ],
@@ -69,7 +68,8 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favorite'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.favorite), label: 'Favorite'),
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
             label: 'Notifications',
